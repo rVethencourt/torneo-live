@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/utilities/variables";
+
+.custom-card {
+	background-color: $whitish;
+	padding: 1rem;
+	border-radius: 2rem;
+	-webkit-box-shadow: 0 0 5px 2px #e3e4e6;
+    -moz-box-shadow: 0 0 5px 2px #e3e4e6;
+    box-shadow: 0 0 5px 2px #e3e4e6;
+}

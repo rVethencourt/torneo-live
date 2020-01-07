@@ -1,0 +1,57 @@
+<div class="row">
+	<div class="col-sm-8">
+		<div class="live ml-3 mb-3">
+			<span class="m-2"></span><p class="ml-1 mr-2">LIVE</p>
+		</div>
+		<h6 class="mt-2 ml-3"><span><img src="./assets/images/location.JPG"></span>Cancha 1</h6>
+		<div class="row scores">
+			<div class="col-sm-3 pre-box">
+				<div class="team m-2"></div>
+			</div>
+			<div class="col-sm-3 pre-box">
+				<div class="score win m-2">
+					<span>6</span>
+				</div>
+			</div>
+			<div class="col-sm-3 pre-box">
+				<div class="score m-2">
+					<span>2</span>
+				</div>
+			</div>
+			<div class="col-sm-3 pre-box">
+				<div class="score no-score m-2">
+					<span>-</span>
+				</div>
+			</div>
+			<div class="col-sm-3 pre-box">
+				<div class="team m-2"></div>
+			</div>
+			<div class="col-sm-3 pre-box">
+				<div class="score lose m-2">
+					<span>1</span>
+				</div>
+			</div>
+			<div class="col-sm-3 pre-box">
+				<div class="score m-2">
+					<span>0</span>
+				</div>
+			</div>
+			<div class="col-sm-3 pre-box">
+				<div class="score no-score m-2">
+					<span>-</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="row players">
+			<div class="col-sm-12" *ngFor="let player of players">
+				<div class="player-img mr-3 mb-2" [style.backgroundImage]="'url('+player.img+')'"></div>
+				<div class="player-info">
+					<p class="mb-0">{{player.name}}</p>
+					<p class="mb-0">{{player.country}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

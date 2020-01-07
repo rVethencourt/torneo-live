@@ -1,0 +1,35 @@
+@import "../../assets/utilities/variables";
+
+.main {
+	background-color: $lightest;
+	padding: 2rem;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;	
+}
+
+img.brand {
+	width: 120px;
+}
+
+.sponsors {
+	align-self: flex-end;
+}
+
+.sponsor > img {
+	width: 50px;
+	height: 50px;
+}
+
+.tournament p {
+	font-size: 0.8rem;
+}
+
+.bracket {
+	padding: 1rem;
+}

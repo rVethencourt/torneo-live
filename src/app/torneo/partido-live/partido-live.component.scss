@@ -1,0 +1,129 @@
+@import "../../../assets/utilities/variables";
+
+h6 img {
+	width: 20px;
+	height: 20px;
+}
+
+.live {
+	width: fit-content;
+	border-radius: 2rem;
+	background-color: $lightest;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.live > span {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #CD201F;
+	z-index: 4;
+}
+
+.live > span:before {
+	content: '';
+	position: absolute;
+    top: 6px;
+    left: 37px;
+	opacity: 0.4;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #CD201F;
+	z-index: 2;
+}
+
+.live > p {
+	display: unset;
+	margin-bottom: unset;
+	font-weight: bold;
+}
+
+.pre-box {
+	position: relative;
+}
+
+.pre-box:before {
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* ratio of 1:1*/
+}
+
+.scores {
+	background-color: $lightest;
+	border-radius: 1rem;
+	margin: 1rem;
+}
+
+.score {
+	background-color: $whitish;
+	border-radius: 1rem;
+}
+
+.win {
+	border: 4px solid $highlightBlue;
+}
+
+.no-score span,
+.lose span {
+	color: #d9d9d9;
+}
+
+.score,
+.team {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score span {
+	font-size: 3rem;
+    font-weight: bolder;
+}
+
+.players > div > div {
+	display: inline-block;
+} 
+
+.player-img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+	z-index: 2;
+}
+
+.player-img:before {
+	content: "";
+	background-color: gray;
+	position: absolute;
+	top: 60%;
+	left: 28px;
+	width: 25px;
+	height: 15px;
+	border-radius: 4px;
+	opacity: 0.8;
+	z-index: 4;
+}
+
+.player-info {
+	vertical-align: top;
+}
+
+.player-info p {
+	font-weight: bold;
+}
+
+.player-info p:last-child {
+	font-size: 0.7rem;
+}
+
+// [attr.data-before]
