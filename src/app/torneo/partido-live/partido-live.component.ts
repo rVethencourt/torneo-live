@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PartidoLiveComponent implements OnInit {
+  game: any;
   players: any[];
 
   constructor() {
   	const path = "./assets/images/faces/";
+
   	this.players = [
   		{name: 'Michael Cors', country: 'Estados Unidos', img: path+'1.jpg'},
   		{name: 'Javier Merchán', country: 'Venezuela', img: path+'2.jpg'},

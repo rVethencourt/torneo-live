@@ -9,3 +9,51 @@
     -moz-box-shadow: 0 0 5px 2px #e3e4e6;
     box-shadow: 0 0 5px 2px #e3e4e6;
 }
+
+.live {
+	width: fit-content;
+	border-radius: 2rem;
+	background-color: $lightest;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.live > p,
+.live > small {
+	display: unset;
+	margin-bottom: unset;
+	font-weight: bold;
+}
+
+.live-icon {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #CD201F;
+	z-index: 4;
+}
+
+.live-icon:before {
+	content: '';
+	position: absolute;
+    top: 6px;
+    left: 37px;
+	opacity: 0.4;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #CD201F;
+	z-index: 2;
+}
+
+small {
+	font-size: 0.5rem !important;
+}
+
+.aligner {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

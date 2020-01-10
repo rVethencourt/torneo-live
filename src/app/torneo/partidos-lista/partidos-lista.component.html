@@ -1,1 +1,32 @@
-<p>partidos-live works!</p>
+<div class="p-3">
+	<h6 class="mt-2 ml-3">Partidos Live</h6>
+	<div *ngFor="let game of games; let i=index">
+		<div class="custom-card col-sm-12 mb-2"
+		[ngClass]="{'active': activeIndex == i}">
+			<div class="row no-gutters game-header p-1">
+				<div class="col-sm-4">
+					<div class="live">
+						<span class="live-icon ml-3 mr-2 mt-2 mb-2"></span>
+						<small class="ml-1 mr-2">LIVE</small>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div>
+						<small>
+							<span><img src="./assets/images/location.JPG"></span>
+							Cuartos de Final
+						</small>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div>
+						<small>
+							<span><img src="./assets/images/location.JPG"></span>
+							Cancha 1
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

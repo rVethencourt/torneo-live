@@ -1,0 +1,44 @@
+@import "../../../assets/utilities/variables";
+
+.custom-card {
+	padding: 0.5rem !important;
+	border-radius: 10px;
+}
+
+.game-header {
+    background-color: $lightBlue;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: -0.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.game-header img {
+	width: 10px;
+	height: 10px;
+}
+
+.game-header > div:nth-child(2) {
+	margin: auto;
+}
+
+.game-header > div:nth-child(3) {
+	margin-right: auto;
+}
+
+.game-header > div > div {
+	height: 100%;
+	width: fit-content;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.live-icon:before {
+	left: 14px !important;
+}
+
+.live-icon + small {
+	vertical-align: text-top;
+}
+

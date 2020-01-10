@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PartidosListaComponent implements OnInit {
+  games: any[];
+  activeIndex: number;
 
-  constructor() { }
+  constructor() {
+  	this.games = [0, 1];
+  	this.activeIndex = 1;
+  }
 
   ngOnInit() {
   }
