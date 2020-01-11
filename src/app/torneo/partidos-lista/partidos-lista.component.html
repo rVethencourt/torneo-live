@@ -1,6 +1,6 @@
 <div class="p-3">
-	<h6 class="mt-2 ml-3">Partidos Live</h6>
-	<div *ngFor="let game of games; let i=index">
+	<h6 class="mt-2">Partidos Live</h6>
+	<div class="ml-3 mb-3" *ngFor="let game of games; let i=index">
 		<div class="custom-card col-sm-12 mb-2"
 		[ngClass]="{'active': activeIndex == i}">
 			<div class="row no-gutters game-header p-1">
@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div>
+					<div class="mr-2">
 						<small>
 							<span><img src="./assets/images/location.JPG"></span>
 							Cancha 1
