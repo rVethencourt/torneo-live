@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AuthService } from '../servicios/auth.service';
+import { LoginStore } from '../stores/login.store';
+
 @Component({
   selector: 'app-torneo',
   templateUrl: './torneo.component.html',
@@ -11,14 +14,31 @@ export class TorneoComponent implements OnInit {
   partido: any;
   sponsors: string[];
 
-  constructor() {
+  constructor(private _authService: AuthService, private _loginStore: LoginStore) {
     
   }
 
   ngOnInit() {
+    this.login();
     this.getTorneo();
     this.getPartido();
     this.getSponsors();
+  }
+
+  login() {
+    const user = {
+      "email": "jrodriguez@labequis.com",
+      "password": "12345678"
+    };
+
+    this._loginStore.login(user).subscribe(
+      (data) => {
+        this._authService.setToken(data.token);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 
   getTorneo() {

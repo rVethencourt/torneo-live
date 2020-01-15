@@ -6,8 +6,8 @@
 	padding: 1rem;
 	border-radius: 2rem;
 	-webkit-box-shadow: 0 0 5px 2px #e3e4e6;
-    -moz-box-shadow: 0 0 5px 2px #e3e4e6;
-    box-shadow: 0 0 5px 2px #e3e4e6;
+	-moz-box-shadow: 0 0 5px 2px #e3e4e6;
+	box-shadow: 0 0 5px 2px #e3e4e6;
 }
 
 /*Live Icon*/
@@ -16,8 +16,8 @@
 	border-radius: 2rem;
 	background-color: $lightest;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 
 .live > p,
@@ -39,14 +39,36 @@
 .live-icon:before {
 	content: '';
 	position: absolute;
-    top: 6px;
-    left: 37px;
+	top: 6px;
+	left: 37px;
 	opacity: 0.4;
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
 	background-color: #CD201F;
 	z-index: 2;
+}
+
+/* Player Avatar */
+.player-img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+	z-index: 2;
+}
+
+.player-img:before {
+	content: "";
+	background-color: gray;
+	position: absolute;
+	top: 60%;
+	left: 28px;
+	width: 25px;
+	height: 15px;
+	border-radius: 4px;
+	opacity: 0.8;
+	z-index: 4;
 }
 
 /*Score Card*/
@@ -78,23 +100,23 @@
 }
 
 .score-box:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
+	content: "";
+	display: block;
+	padding-top: 100%;
 }
 
 .score-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  line-height: 100%;
-  height: 100%;
-  background-color: $lightest;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	line-height: 100%;
+	height: 100%;
+	background-color: $lightest;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .score-content {
@@ -103,11 +125,11 @@
 	background-color: $whitish;
 	border-radius: 1.5rem;
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
 }
 
 /* Misc */
@@ -118,6 +140,6 @@ small {
 
 .aligner {
 	display: flex;
-    flex-direction: row;
-    justify-content: center;
+	flex-direction: row;
+	justify-content: center;
 }

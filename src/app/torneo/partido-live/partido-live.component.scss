@@ -7,27 +7,6 @@ h6 img {
 
 .players > div > div {
 	display: inline-block;
-} 
-
-.player-img {
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	background-size: contain;
-	z-index: 2;
-}
-
-.player-img:before {
-	content: "";
-	background-color: gray;
-	position: absolute;
-	top: 60%;
-	left: 28px;
-	width: 25px;
-	height: 15px;
-	border-radius: 4px;
-	opacity: 0.8;
-	z-index: 4;
 }
 
 .player-info {
