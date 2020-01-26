@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { AuthService } from './auth.service';
+
 /**
  * A service to make http requests (GET, POST, PUT and DELETE) to the transactional server
  * @class
@@ -13,10 +15,18 @@ export class RequestService {
     _headers: HttpHeaders;
     private _baseUrl: string;
 
-    constructor(private _http: HttpClient) {
+    constructor(private _http: HttpClient, private authService: AuthService) {
         this._headers = new HttpHeaders();
         this._headers = this._headers.set('Content-Type', 'application/json');
+        this._headers = this._headers.set('Accept', 'application/json');
         this._baseUrl = 'https://padel-labx.herokuapp.com/api/';
+
+        this.authService.changed.subscribe(
+          (token: string) => {
+              debugger
+              this._headers = this._headers.set('Authorization', token);
+          }
+        );
     }
 
     get baseUrl() {

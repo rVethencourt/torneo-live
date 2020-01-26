@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { GamesStore } from '../../stores/games.store';
 
 @Component({
   selector: 'app-partido-live',
@@ -7,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PartidoLiveComponent implements OnInit {
+  @Input() id: number;
   game: any;
   players: any[];
 
-  constructor() {
+  constructor(private gamesStore: GamesStore) {
   	const path = "./assets/images/faces/";
 
   	this.players = [
@@ -22,6 +25,18 @@ export class PartidoLiveComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.showGame();
+  }
+
+  showGame() {
+    this.gamesStore.show(this.id).subscribe(
+      (data) => {
+        console.log("== GAME DATA ==", data);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 
 }

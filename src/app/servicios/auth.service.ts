@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class AuthService {
 
 	private _token: string;
+	changed = new Subject<string>();
 
 	constructor() {
 	}
@@ -13,7 +15,8 @@ export class AuthService {
 	}
 
 	setToken(value: string) {
-		this.token = value;
+		this._token = value;
+		this.changed.next(this._token.slice());	
 	}
 
 }

@@ -22,7 +22,8 @@ export class LoginStore {
     	this._requestService.post(this.path, user, [], null).subscribe(
     	    (data) => {
     	        subject.next(data);
-    	    }, (error) => {
+    	    },
+            (error) => {
     	        subject.error(error);
     	    }
     	);

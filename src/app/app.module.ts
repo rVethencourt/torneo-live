@@ -14,6 +14,7 @@ import { PartidoLiveComponent } from './torneo/partido-live/partido-live.compone
 import { RequestService } from './servicios/request.service';
 import { AuthService } from './servicios/auth.service';
 import { LoginStore } from './stores/login.store';
+import { GamesStore } from './stores/games.store';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginStore } from './stores/login.store';
   providers: [
     RequestService,
     AuthService,
-    LoginStore
+    LoginStore,
+    GamesStore
   ],
   bootstrap: [AppComponent]
 })

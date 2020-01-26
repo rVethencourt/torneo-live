@@ -6,16 +6,18 @@ import { LoginStore } from '../stores/login.store';
 @Component({
   selector: 'app-torneo',
   templateUrl: './torneo.component.html',
-  styleUrls: ['./torneo.component.scss']
+  styleUrls: ['./torneo.component.scss'],
+  providers: [AuthService]
 })
 
 export class TorneoComponent implements OnInit {
   torneo: any;
   partido: any;
   sponsors: string[];
+  actId: number;
 
   constructor(private _authService: AuthService, private _loginStore: LoginStore) {
-    
+    this.actId = 312;
   }
 
   ngOnInit() {
@@ -33,7 +35,7 @@ export class TorneoComponent implements OnInit {
 
     this._loginStore.login(user).subscribe(
       (data) => {
-        this._authService.setToken(data.token);
+        this._authService.setToken(data.data.token);
       },
       (error) => {
         console.error(error);

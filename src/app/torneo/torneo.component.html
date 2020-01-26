@@ -17,7 +17,7 @@
 		<h4>{{torneo.nombre}}</h4>
 		<p>@{{torneo.lugar}} - {{torneo.fecha}}</p>
 		<div class="custom-card">
-			<app-partido-live></app-partido-live>
+			<app-partido-live [id]="actId"></app-partido-live>
 		</div>
 		<!-- <div class="bracket">
 			<app-bracket></app-bracket>
